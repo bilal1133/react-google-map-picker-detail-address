@@ -67,7 +67,10 @@ const MapPicker: FC<Props> = ({ apiKey, defaultLocation, zoom = 7, onChangeLocat
     function handleChangeLocation() {
         if (onChangeLocation) {
             const currentLocation = marker.current.getPosition();
-            onChangeLocation(currentLocation.lat(), currentLocation.lng(), currentLocation);
+            console.log(currentLocation)
+            console.log(marker.current)
+            console.log(marker)
+            onChangeLocation(currentLocation.lat(), currentLocation.lng(), marker.current);
         }
     }
 
