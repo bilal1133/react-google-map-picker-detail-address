@@ -81,7 +81,10 @@ var MapPicker = function MapPicker(_ref) {
   function handleChangeLocation() {
     if (onChangeLocation) {
       var currentLocation = marker.current.getPosition();
-      onChangeLocation(currentLocation.lat(), currentLocation.lng());
+      console.log(currentLocation);
+      console.log(marker.current);
+      console.log(marker);
+      onChangeLocation(currentLocation.lat(), currentLocation.lng(), marker.current);
     }
   }
 

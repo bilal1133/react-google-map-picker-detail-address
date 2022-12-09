@@ -13,7 +13,7 @@ declare type Props = {
     apiKey: string;
     defaultLocation: Location;
     zoom?: number;
-    onChangeLocation?(lat: number, lng: number): void;
+    onChangeLocation?(lat: number, lng: number, currentLocation: any): void;
     onChangeZoom?(zoom: number): void;
     style?: any;
     className?: string;
