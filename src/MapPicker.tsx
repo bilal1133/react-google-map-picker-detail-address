@@ -46,7 +46,7 @@ type Props = {
     apiKey: string,
     defaultLocation: Location;
     zoom?: number;
-    onChangeLocation?(lat: number, lng: number): void;
+    onChangeLocation?(lat: number, lng: number, currentLocation : any): void;
     onChangeZoom?(zoom: number): void;
     style?: any;
     className?: string;
@@ -67,7 +67,7 @@ const MapPicker: FC<Props> = ({ apiKey, defaultLocation, zoom = 7, onChangeLocat
     function handleChangeLocation() {
         if (onChangeLocation) {
             const currentLocation = marker.current.getPosition();
-            onChangeLocation(currentLocation.lat(), currentLocation.lng());
+            onChangeLocation(currentLocation.lat(), currentLocation.lng(), currentLocation);
         }
     }
 
